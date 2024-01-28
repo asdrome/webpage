@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="{{ .Site.Data.settings.favicon_image }}">
     
     <link href="/css/style.css?version={{ now }}" rel="stylesheet">
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body id="top" class="{{ if in (substr .Content  0 100) `transparent_header` }}transparent_header{{ end }} filename_{{ with .File }}{{ .BaseFileName }}{{ end }}">
     <script>      
