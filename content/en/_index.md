@@ -9,7 +9,7 @@ Ofrecemos soluciones de transformación tecnológica. Somos una consultora que e
 
 {{< button "Cónoce nuestros productos" "https://store.asdrome.com/" >}}
 
-![](/uploads/branding/LogoColor.webp)
+![](/uploads/branding/LogoColor.svg)
 
 {{< /brick_intro >}}
 {{< brick_image2 >}}

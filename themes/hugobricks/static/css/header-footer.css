@@ -2,7 +2,7 @@
 /* preheader
 /*------------------------*/
 
-.preheader {background: var(--textDark); font-size: 0.9rem; padding: 0.4rem 0; border-bottom: 0.1rem solid var(--light); font-weight: 600;}
+.preheader {font-size: 0.9rem; padding: 0.4rem 0; border-bottom: 0.1rem solid var(--light); font-weight: 600;}
 .preheader, .preheader a {color: white;}
 .preheader .container {display: flex; justify-content: space-between;}
 .preheader .container a.icon {text-decoration: none; margin-right: 2rem;}
@@ -15,8 +15,6 @@
     bottom: 0.1em;
     filter: invert(1);
 }
-.preheader.light {background: var(--light); font-weight: normal;}
-.preheader.light, .preheader.light a {color: var(--textMedium);}
 .preheader.light .container a.icon img {filter: invert(0);}
 @media (max-width: 600px) {
     .preheader .container {justify-content: center;}
@@ -27,14 +25,14 @@
 /* header
 /*------------------------*/
 
-header {position: absolute; background: white; z-index: 9; width: 100%;}
+header {position: absolute; z-index: 9; width: 100%;}
 header > .container {padding-top: 1.5rem; padding-bottom: 1.5rem; position: relative;}
-header.sticky {box-shadow: 0 0 0.5rem rgba(0,0,0,0.1); background: white; position: fixed; top: 0;}
+header.sticky {box-shadow: 0 0 0.5rem rgba(0,0,0,0.1); position: fixed; top: 0;}
 header.sticky > .container {padding-top: 0.75rem; padding-bottom: 0.75rem;}
 header a {text-decoration: none;}
 header ul {display: flex; justify-content: flex-end; gap: 2rem; margin: 0;}
 header ul li {list-style: none; position: relative;}
-header nav > ul > li a {font-weight: bold; color: var(--textDark); padding: 0.80rem 0 0.65rem 0; display: block; white-space: nowrap;}
+header nav > ul > li a {font-weight: bold; color: var(--on-primary-container-text); padding: 0.80rem 0 0.65rem 0; display: block; white-space: nowrap;}
 header nav > ul > li::after {
     content: "";
     position: absolute;
@@ -42,7 +40,6 @@ header nav > ul > li::after {
     bottom: 0.6rem;
     width: 100%;
     height: 0.05rem;
-    background-color: var(--textDark);
     transform: scaleX(0);
     transition: transform 0.15s ease-in-out;
 }
@@ -52,9 +49,10 @@ header nav > ul > li > ul {
     opacity: 0;
     transform: translateY(0.25rem);
     position: absolute;
-    box-shadow: 0px 0px 1.5rem rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 1.5rem rgba(0,0,0,0.5);
     margin-left: -1rem;
-    background: white;
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
     border-radius: 0.4rem;
     text-align: left;
     padding: 0.75rem 0 0.85rem;
@@ -102,13 +100,13 @@ body.transparent_header header:not(.sticky) nav > ul > li.haschildren > a::after
 body.transparent_header header:not(.sticky) #togglemenu,
 body.transparent_header header:not(.sticky) a.logo > div img.inline {filter: invert(1)!important;}
 body.transparent_header header + section.bgimage {padding-top: 0!important;}
-body.transparent_header header:not(.sticky) .button {background: var(--accent); color: white;}
-
+/* body.transparent_header header:not(.sticky) .button {background: var(--accent); color: white;}
+ */
 /*------------------------*/
 /* footer
 /*------------------------*/
 
-footer {background: var(--light); margin-top: 4rem; border-top: 0.1rem solid var(--light);}
+footer {margin-top: 4rem; border-top: 0.1rem solid var(--light);}
 footer a {text-decoration: none;}
 footer .logo > div.has_subtitle {padding-bottom: 0.5rem;}
 footer ul {display: flex; justify-content: center; gap: 0 2rem; margin: 0; flex-wrap: wrap;}
@@ -129,11 +127,10 @@ footer ul.buttons {justify-content: flex-end; padding: 0;}
     footer ul {margin: 0.25rem 0 0.5rem;}
 }
 
-footer.dark {background: var(--textDark);}
+/* footer.dark {background: var(--textDark);} */
 footer.dark a.logo {color: white;}
 footer.dark > div:last-child {border-top: 1px solid rgba(255,255,255,0.1);}
 footer.dark, footer.dark > div:last-child a, footer.dark ul li a {color: rgba(255,255,255,0.5);}
-footer.dark ul.buttons.social .button {background: var(--accent);}
 footer.dark a.logo img.inline {filter: invert(1)!important;}
 
 /*------------------------*/
@@ -163,8 +160,8 @@ body.mobilemenu header > div.container > div:nth-child(1) {grid-area: logo;}
 body.mobilemenu header > div.container > div:nth-child(2) {
     grid-area: menu; 
     position: fixed;
-    background: var(--textDark);
-    color: white;
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-secondary-container);
     transform: translateX(100%);
     width: 100%;
     right: 0;
@@ -208,7 +205,7 @@ body.mobilemenu.menushown #togglemenu {
 body.mobilemenu.menushown .preheader + header #togglemenu {top: 3.75rem;}
 body.mobilemenu.menushown header.sticky #togglemenu {top: 0.75rem;}
 body.mobilemenu.menushown header > div.container > div:nth-child(2) {transform: translateX(0%);}
-body.mobilemenu.menushown header nav > ul > li a {color: white;}
+body.mobilemenu.menushown header nav > ul > li a {color: var(--md-sys-color-on-secondary-container);}
 
 @media (max-width: 450px) {
     header .button {display: none;}

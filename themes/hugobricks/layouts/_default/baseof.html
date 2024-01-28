@@ -12,18 +12,21 @@
     <link href="/css/style.css?version={{ now }}" rel="stylesheet">
 
   </head>
-  <body id="top" class="{{ if in (substr .Content  0 100) `transparent_header` }}transparent_header{{ end }} filename_{{ with .File }}{{ .BaseFileName }}{{ end }}">
+  <body id="top" class="background on-background-text {{ if in (substr .Content  0 100) `transparent_header` }}transparent_header{{ end }} filename_{{ with .File }}{{ .BaseFileName }}{{ end }}">
     <script>      
       function updateSize() {
-        if(window.innerWidth<{{ (index .Site.Data .Language.Lang).header.mobile_view_width }}) document.body.classList.add('mobilemenu');
-        else document.body.classList.remove('mobilemenu');
+        if(window.innerWidth < {{(index .Site.Data .Language.Lang).header.mobile_view_width}}){
+          document.body.classList.add('mobilemenu');
+        } else {
+          document.body.classList.remove('mobilemenu');
+        }
       }
       updateSize();
       window.addEventListener("resize", updateSize);
     </script>
     <div class="innerbody">
     {{- if .Site.Data.settings.preheader.active -}}
-    <div class="preheader{{ if .Site.Data.settings.preheader.is_light }} light{{- end -}}">
+    <div class="on-tertiary-container-text tertiary-container preheader{{ if .Site.Data.settings.preheader.is_light }} light{{- end -}}">
       <div class="container">
         <div class="icons">
           {{- if (index .Site.Data .Language.Lang).general.contact.phone -}}
@@ -40,7 +43,7 @@
     </div>
     {{- end -}}
     <header>
-      <div class="container {{ if (index .Site.Data .Language.Lang).header.cta.active }}has_cta{{ end }}">
+      <div class="on-background-text background container {{ if (index .Site.Data .Language.Lang).header.cta.active }}has_cta{{ end }}">
         <div>
           {{ partial "logo.html" . }}
         </div>
@@ -52,7 +55,7 @@
                   {{ if (index .items 0).title }}
                   <ul>
                     {{ range .items }}
-                      <li><a href="{{ .link }}">{{ .title }}</a></li>
+                      <li><a class="" href="{{ .link }}">{{ .title }}</a></li>
                     {{ end }}
                   </ul>
                   {{ end }}
@@ -90,7 +93,7 @@
         </div>
       </div>
       <div>
-        <div class="container">
+        <div class="tertiary-container container">
 		      <div>{{ markdownify (index .Site.Data .Language.Lang).footer.footer_text }}</div>
 		    </div>
   		</div>

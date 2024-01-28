@@ -1,8 +1,8 @@
 favicon_image: /uploads/branding/LogoColor.svg
 sticky_header: true
-customcursor: true
-intersectionobserver: true
-filter_has_numbers: true
+customcursor: false
+intersectionobserver: false
+filter_has_numbers: false
 page_size: 3
 preheader: 
   active: true
