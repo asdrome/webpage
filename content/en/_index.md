@@ -3,13 +3,13 @@ title: Home
 ---
 {{< brick_intro >}}
 
-# Build your next Hugo website with stackable content bricks
+# Bienvenidos al asdrome.com, si se pudo
 
-Hugobricks is a free website theme for Hugo. It makes building Hugo websites child's play due to its stackable (LEGO-like) content bricks. How about this 'intro brick' with a clear call-to-action? Stack it on top of some image bricks and a pricing table and build a complete website in seconds!
+Ofrecemos soluciones de transformación tecnológica. Somos una consultora que eleva empresas, redefine estándares y abraza la sutileza en cada línea de código. Desde la automatización hasta el desarrollo de software y la venta de equipos de cómputo, estamos aquí para impulsar tu visión con soluciones que trascienden las expectativas.
 
-{{< button "Get started for free" "/get-started/" >}}
+{{< button "Cónoce nuestros productos" "https://store.asdrome.com/" >}}
 
-![](/uploads/illustrations/cuate/assets.svg)
+![](/uploads/branding/LogoColor.webp)
 
 {{< /brick_intro >}}
 {{< brick_image2 >}}
