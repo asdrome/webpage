@@ -1,4 +1,4 @@
-[![](https://asdrometest.netlify.app/uploads/branding/LogoColor.svg)](https://www.asdrome.com/)
+[![](https://res.cloudinary.com/asdrome-media/image/upload/f_auto,q_auto/v1/logos/LogoColor)](https://www.asdrome.com/)
 
 # ASDROME WEBPAGE
 Este repositorio contiene todo lo necesario para crear un sitio web utilizando Hugo y el tema HugoBricks. Con un enfoque en la simplicidad, velocidad y modularidad, HugoBricks ofrece un diseño moderno y personalizable para tu sitio web estático.
