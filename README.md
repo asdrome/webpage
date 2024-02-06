@@ -8,7 +8,7 @@ Este repositorio contiene todo lo necesario para crear un sitio web utilizando H
 ## Contenido del Repositorio
 - **Tema HugoBricks**: El tema está integrado como un submódulo en el directorio /themes/hugobricks, asegurando que tengas la última versión del tema con sus características y mejoras.
 
-- **Configuración*: El archivo netlify.toml contiene la configuración principal del sitio, incluyendo ajustes para el tema HugoBricks y otras opciones globales.
+- **Configuración**: El archivo netlify.toml contiene la configuración principal del sitio, incluyendo ajustes para el tema HugoBricks y otras opciones globales.
 
 # ¿Por qué utilizar HUGO?
 - **Velocidad**: Hugo genera sitios web estáticos de manera extremadamente rápida, lo que permite una experiencia de usuario ágil
