@@ -3,7 +3,7 @@
 # ASDROME
 [Hugo](https://gohugo.io/) es un generador de sitios web estáticos de código abierto, escrito en Go. Ofrece un rendimiento excepcional y una estructura de archivos sencilla, lo que lo convierte en una excelente elección para crear sitios web rápidos y eficientes.
 
-## ¿Por qué utilizar HUGO?
+# ¿Por qué utilizar HUGO?
 - **Velocidad**: Hugo genera sitios web estáticos de manera extremadamente rápida, lo que permite una experiencia de usuario ágil
 - **Sencillez**: Su estructura de archivos clara y su enfoque minimalista facilitan la creación y mantenimiento de sitios web.
 - **Flexibilidad**: Soporta una amplia gama de formatos de contenido, y es fácilmente personalizable a través de temas y plantillas
