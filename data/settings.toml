@@ -1,6 +1,7 @@
 
 description = 'Asdrome es una empresa dedicada a servicios de desarrollo y automatización.'
 icon = '/uploads/branding/LogoColor.svg'
+logo = '/uploads/branding/LogoColor.svg'
 sticky_header = true
 customcursor = false
 intersectionobserver = false

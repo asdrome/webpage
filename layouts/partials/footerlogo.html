@@ -1,19 +1,37 @@
-<a href="{{ relLangURL `/` }}#top" class="logo">
-    {{ if (index .Site.Data .Language.Lang).footer.logo_image }}
-        <div class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}">
-            <img src="{{ (index .Site.Data .Language.Lang).footer.logo_image }}" alt="{{ (index .Site.Data .Language.Lang).general.title }} logo" class="inline" />
-            <div>
-                <span>{{ (index .Site.Data .Language.Lang).general.title }}</span>
-                {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span>{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span>{{ end }}
-            </div>
-        </div>
+<div>
+  <a href="{{ relLangURL `/` }}" class="logo">
+    {{ if .Site.Data.settings.logo }}
+    <div
+      class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}"
+    >
+      <img
+        src="{{ .Site.Data.settings.logo }}"
+        alt="{{ .Site.Title }} logo"
+        class="inline"
+      />
+      <div>
+        <span>{{ .Site.Title }}</span>
+        {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span
+          >{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span
+        >{{ end }}
+      </div>
+    </div>
     {{ else }}
-        <div class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}">
-            <img src="{{ .Site.Data.settings.favicon_image }}" alt="{{ (index .Site.Data .Language.Lang).general.title }} logo" class="inline" />
-            <div>
-                <span>{{ (index .Site.Data .Language.Lang).general.title }}</span>
-                {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span>{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span>{{ end }}
-            </div>
-        </div>
+    <div
+      class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}"
+    >
+      <img
+        src="{{ .Site.Data.settings.logo }}"
+        alt="{{ .Site.Title }} logo"
+        class="inline"
+      />
+      <div>
+        <span>{{ .Site.Title }}</span>
+        {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span
+          >{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span
+        >{{ end }}
+      </div>
+    </div>
     {{ end }}
-</a>
+  </a>
+</div>

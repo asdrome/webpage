@@ -2,7 +2,7 @@ baseURL = 'https://asdrome.com/'
 title = 'Asdrome'
 languageCode = 'es'
 defaultContentLanguage = 'es'
-theme = 'hugobricks'
+theme = 'material-hugo'
 
 
 [[menus.main]]
