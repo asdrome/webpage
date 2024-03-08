@@ -1,23 +1,18 @@
 logo_image: /uploads/branding/Logo.svg
 dark_footer: true
 menuitems:
-  - title: About
+  - title: Acerca
     link:  /about/
-  - title: Elements
-    link:  /elements/
-  - title: Privacy policy
+  - title: Política de privacidad
     link:  /privacy-policy/
 socials:
   - title: Facebook
-    link: https://facebook.com
+    link: https://facebook.com/asdrome.inc
     logo_image: /img/facebook.svg
   - title: Twitter
     link: https://twitter.com
-    logo_image: /img/twitter.svg      
-  - title: Mastodon
-    link: https://joinmastodon.org
-    logo_image: /img/mastodon.svg      
+    logo_image: /img/twitter.svg         
   - title: Instagram
-    link: https://instagram.com
+    link: https://instagram.com/asdrome.inc
     logo_image: /img/instagram.svg
-footer_text: This theme is open source. More info on [Github](https://github.com/jhvanderschee/hugobricks)!
+footer_text: Este sitio esta basado en [***Hugobricks***](https://github.com/jhvanderschee/hugobricks) y usa el tema [***Material Hugo***](https://github.com/asdrome/material-hugo) !

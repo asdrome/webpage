@@ -66,7 +66,7 @@
         </div>
         {{ if (index .Site.Data .Language.Lang).header.cta.active }}
         <div>
-          <a href="{{ (index .Site.Data .Language.Lang).header.cta.link }}" class="button ghost smaller">{{ (index .Site.Data .Language.Lang).header.cta.title }}</a>
+          <md-filled-tonal-button href="{{ (index .Site.Data .Language.Lang).header.cta.link }}">{{ (index .Site.Data .Language.Lang).header.cta.title }}</md-filled-tonal-button>
         </div>
         {{ end }}
         <button id="togglemenu" onclick="document.body.classList.toggle('menushown');">Toggle menu</button>
