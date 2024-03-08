@@ -1,0 +1,3 @@
+[submodule "themes/material-hugo"]
+	path = themes/material-hugo
+	url = https://github.com/asdrome/material-hugo

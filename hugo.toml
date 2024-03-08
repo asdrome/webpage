@@ -1,0 +1,40 @@
+baseURL = 'https://asdrome.com/'
+title = 'Asdrome'
+languageCode = 'es'
+defaultContentLanguage = 'es'
+assetDir = 'static'
+theme = 'hugobricks'
+
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+[languages]
+  [languages.es]
+    languageName= 'Español'
+    contentDir= 'content/es'
+    weight= 1
+    disabled= false
+  [languages.en]
+    languageName= 'English'
+    contentDir= 'content/en'
+    weight= 2
+    disabled= true
+
