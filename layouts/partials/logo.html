@@ -3,9 +3,9 @@
         <img src="{{ (index .Site.Data .Language.Lang).header.logo_image }}" alt="{{ (index .Site.Data .Language.Lang).general.title }} logo" />
     {{ else }}
         <div class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}">
-            <img src="{{ .Site.Data.settings.favicon_image }}" alt="{{ (index .Site.Data .Language.Lang).general.title }} logo" class="inline" />
+            <img src="{{ .Site.Data.settings.icon }}" alt="{{ .Site.Title }} logo" class="inline" />
             <div>
-                <span>{{ (index .Site.Data .Language.Lang).general.title }}</span>
+                <span>{{ .Site.Title }}</span>
                 {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span>{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span>{{ end }}
             </div>
         </div>

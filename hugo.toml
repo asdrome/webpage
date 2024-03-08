@@ -2,7 +2,6 @@ baseURL = 'https://asdrome.com/'
 title = 'Asdrome'
 languageCode = 'es'
 defaultContentLanguage = 'es'
-assetDir = 'static'
 theme = 'hugobricks'
 
 
