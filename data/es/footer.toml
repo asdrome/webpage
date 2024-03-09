@@ -1,6 +1,7 @@
 logo_image = "/uploads/branding/Logo.svg"
-dark_footer = true
+dark_footer = false
 footer_text = "Este sitio esta basado en [***Hugobricks***](https://github.com/jhvanderschee/hugobricks) y usa el tema [***Material Hugo***](https://github.com/asdrome/material-hugo) !"
+copyright = "Copyright **Asdrome** 2023-2024. Todos los derechos reservados."
 
 [[menuitems]]
 title = "Acerca"

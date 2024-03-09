@@ -1,0 +1,40 @@
+
+<script>      
+    function updateSize() {
+      if(window.innerWidth < {{(index .Site.Data .Language.Lang).header.mobile_view_width}}){
+        document.body.classList.add('mobilemenu');
+      } else {
+        document.body.classList.remove('mobilemenu');
+      }
+    }
+    updateSize();
+    window.addEventListener("resize", updateSize);
+</script>
+
+<div class="container {{ if (index .Site.Data .Language.Lang).header.cta.active }}has_cta{{ end }}">
+    <div>
+      {{ partial "logo.html" . }}
+    </div>
+    <div class="nav">
+      <nav>
+        <ul>
+          {{ range (index .Site.Data .Language.Lang).header.menuitems }}
+            <li class="{{ if eq .link `/` }}{{ if eq $.RelPermalink `/` }}active{{ end }}{{ else }}{{ if in $.RelPermalink .link }}active{{ end }}{{ end }}{{ if (index .items 0).title }} haschildren{{ end }}"><a href="{{ .link }}">{{ .title }}</a>
+              {{ if (index .items 0).title }}
+              <ul>
+                {{ range .items }}
+                  <li><a class="" href="{{ .link }}">{{ .title }}</a></li>
+                {{ end }}
+              </ul>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+    {{ if (index .Site.Data .Language.Lang).header.cta.active }}
+    <div>
+      <md-filled-tonal-button href="{{ (index .Site.Data .Language.Lang).header.cta.link }}">{{ (index .Site.Data .Language.Lang).header.cta.title }}</md-filled-tonal-button>
+    </div>
+    {{ end }}
+   {{/*   <button id="togglemenu" onclick="document.body.classList.toggle('menushown');">Toggle menu</button>  */}}
