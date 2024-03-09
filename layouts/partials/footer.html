@@ -1,3 +1,14 @@
 
-{{ partial "footerlogo.html" . }}
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+
+<div class="container">
+    {{ partial "footerlogo.html" . }}
+    <div>
+        <ul>
+          {{ range (index .Site.Data .Language.Lang).footer.menuitems }}
+            <li><a href="{{ .link }}">{{ .title }}</a></li>
+          {{ end }}
+        </ul>  
+    </div>
+    {{ partial "socialbuttons.html" . }}
+    <p>Copyright {{ now.Year }}. All rights reserved.</p>
+</div>

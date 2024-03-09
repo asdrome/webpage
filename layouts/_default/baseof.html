@@ -1,47 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ .Language.Lang }}">
-  <head>
-    <title>{{ if .Params.seo.title }}{{ .Params.seo.title }}{{ else }}{{ .Title }} | {{ (index .Site.Data .Language.Lang).general.title }} {{ (index .Site.Data .Language.Lang).header.logo_subtitle }}{{ end }}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ if .Params.seo.description }}{{ .Params.seo.description }}{{ else }}{{ .Summary }}{{ end }}">
 
-    <link rel="canonical" href="{{ .Permalink }}" />
-    <link rel="shortcut icon" href="{{ .Site.Data.settings.icon }}">
-    
-    <link href="/css/style.css?version={{ now }}" rel="stylesheet">
-
-  </head>{{/*  
+  {{/*  
   <body id="top" class="background on-background-text {{ if in (substr .Content  0 100) `transparent_header` }}transparent_header{{ end }} filename_{{ with .File }}{{ .BaseFileName }}{{ end }}">
-    <script>      
-      function updateSize() {
-        if(window.innerWidth < {{(index .Site.Data .Language.Lang).header.mobile_view_width}}){
-          document.body.classList.add('mobilemenu');
-        } else {
-          document.body.classList.remove('mobilemenu');
-        }
-      }
-      updateSize();
-      window.addEventListener("resize", updateSize);
-    </script>
+    
     <div class="innerbody background">
-    {{- if .Site.Data.settings.preheader.active -}}
-    <div class="on-tertiary-container-text tertiary-container preheader{{ if .Site.Data.settings.preheader.is_light }} light{{- end -}}">
-      <div class="container">
-        <div class="icons">
-          {{- if (index .Site.Data .Language.Lang).general.contact.phone -}}
-            <a href="tel:{{ replace (index .Site.Data .Language.Lang).general.contact.phone ` ` `` }}" class="icon"><img src="/img/phone.svg" alt="{{ (index .Site.Data .Language.Lang).general.contact.phone }}" class="black_2_textMedium" /> {{ (index .Site.Data .Language.Lang).general.contact.phone }}</a>
-          {{- end -}}
-          {{- if (index .Site.Data .Language.Lang).general.contact.email -}}
-            <a href="mailto:{{ (index .Site.Data .Language.Lang).general.contact.email }}" class="icon"><img src="/img/email.svg" alt="{{ (index .Site.Data .Language.Lang).general.contact.email }}" class="black_2_textMedium" /> {{ (index .Site.Data .Language.Lang).general.contact.email }}</a>
-          {{- end -}}
-        </div>
-        <div>
-          {{- if .Site.Data.settings.preheader.text -}}{{ .Site.Data.settings.preheader.text }}{{- end -}}
-        </div>
-      </div>  
-    </div>
-    {{- end -}}
+
     <header>
       <div class="on-background-text background container {{ if (index .Site.Data .Language.Lang).header.cta.active }}has_cta{{ end }}">
         <div>
@@ -102,7 +65,10 @@
 
       </div>
   </body>  */}}
-
+  <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+    <head>
+      {{ partial "head.html" . }}
+    </head>
   <body>
     <header>
       {{ partial "header.html" . }}

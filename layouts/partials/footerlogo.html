@@ -1,37 +1,23 @@
 <div>
   <a href="{{ relLangURL `/` }}" class="logo">
-    {{ if .Site.Data.settings.logo }}
     <div
       class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}"
     >
+      {{ if .Site.Data.settings.logo }}
       <img
         src="{{ .Site.Data.settings.logo }}"
         alt="{{ .Site.Title }} logo"
         class="inline"
       />
+      {{ else }}
+      <span>{{ .Site.Title }}</span>
+      {{ end }}
       <div>
-        <span>{{ .Site.Title }}</span>
-        {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span
-          >{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span
+        {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}
+        <span>
+          {{ (index .Site.Data .Language.Lang).header.logo_subtitle }} </span
         >{{ end }}
       </div>
     </div>
-    {{ else }}
-    <div
-      class="{{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}has_subtitle{{ end}}"
-    >
-      <img
-        src="{{ .Site.Data.settings.logo }}"
-        alt="{{ .Site.Title }} logo"
-        class="inline"
-      />
-      <div>
-        <span>{{ .Site.Title }}</span>
-        {{ if (index .Site.Data .Language.Lang).header.logo_subtitle }}<span
-          >{{ (index .Site.Data .Language.Lang).header.logo_subtitle }}</span
-        >{{ end }}
-      </div>
-    </div>
-    {{ end }}
   </a>
 </div>
