@@ -1,8 +1,11 @@
 {{ define "home" }}
-  {{ .Content }}
-  {{ partial "material.html" . }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+<div class="p-2">
+  <md-elevated-card class="p-5">
+    {{ .Content }}
+    {{ range site.RegularPages }}
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    {{ end }}
+  </md-elevated-card>
+</div>
 {{ end }}

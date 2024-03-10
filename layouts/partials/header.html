@@ -1,40 +1,63 @@
-
-<script>      
-    function updateSize() {
-      if(window.innerWidth < {{(index .Site.Data .Language.Lang).header.mobile_view_width}}){
-        document.body.classList.add('mobilemenu');
-      } else {
-        document.body.classList.remove('mobilemenu');
-      }
-    }
-    updateSize();
-    window.addEventListener("resize", updateSize);
-</script>
-
-<div class="container {{ if (index .Site.Data .Language.Lang).header.cta.active }}has_cta{{ end }}">
-    <div>
-      {{ partial "logo.html" . }}
-    </div>
-    <div class="nav">
-      <nav>
-        <ul>
-          {{ range (index .Site.Data .Language.Lang).header.menuitems }}
-            <li class="{{ if eq .link `/` }}{{ if eq $.RelPermalink `/` }}active{{ end }}{{ else }}{{ if in $.RelPermalink .link }}active{{ end }}{{ end }}{{ if (index .items 0).title }} haschildren{{ end }}"><a href="{{ .link }}">{{ .title }}</a>
-              {{ if (index .items 0).title }}
-              <ul>
-                {{ range .items }}
-                  <li><a class="" href="{{ .link }}">{{ .title }}</a></li>
-                {{ end }}
-              </ul>
+<md-elevated-card class="mx-2">
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Logo o título de la página -->
+      <a class="navbar-brand" href="#">Mi Sitio</a>
+      {{/* {{ partial "logo.html" . }} */}}
+      <!-- Elementos de la barra de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          {{ range (index .Site.Data .Language.Lang).header.menuitems }} {{ if
+          (index .items 0).title }}
+          <li
+            class="nav-item dropdown {{ if eq .link `/` }}{{ if eq $.RelPermalink `/` }}active{{ end }}{{ else }}{{ if in $.RelPermalink .link }}active{{ end }}{{ end }}{{ if (index .items 0).title }} haschildren{{ end }}"
+          >
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ .link }}"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ .title }}
+            </a>
+            <ul class="dropdown-menu" style="z-index: 9999;">
+              {{ range .items }}
+              <li>
+                <a class="dropdown-item" href="{{ .link }}">{{ .title }}</a>
+              </li>
               {{ end }}
-            </li>
-          {{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li
+            class="nav-item {{ if eq .link `/` }}{{ if eq $.RelPermalink `/` }}active{{ end }}{{ else }}{{ if in $.RelPermalink .link }}active{{ end }}{{ end }}{{ if (index .items 0).title }} haschildren{{ end }}"
+          >
+            <a class="nav-link" href="{{ .link }}">{{ .title }}</a>
+          </li>
+          {{ end }} {{ end }}
         </ul>
-      </nav>
+      </div>
+      {{ if (index .Site.Data .Language.Lang).header.cta.active }}
+      <div class="g-col-6 justify-content-center align-self-center">
+        <md-filled-tonal-button
+          href="{{ (index .Site.Data .Language.Lang).header.cta.link }}"
+          >{{ (index .Site.Data .Language.Lang).header.cta.title
+          }}</md-filled-tonal-button
+        >
+      </div>
+      {{ end }}
+      <!-- Botón para dispositivos pequeños -->
+      <md-icon-button class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <md-icon>menu_open</md-icon>
+      </md-icon-button>
     </div>
-    {{ if (index .Site.Data .Language.Lang).header.cta.active }}
-    <div>
-      <md-filled-tonal-button href="{{ (index .Site.Data .Language.Lang).header.cta.link }}">{{ (index .Site.Data .Language.Lang).header.cta.title }}</md-filled-tonal-button>
-    </div>
-    {{ end }}
-   {{/*   <button id="togglemenu" onclick="document.body.classList.toggle('menushown');">Toggle menu</button>  */}}
+  </nav>
+</md-elevated-card>

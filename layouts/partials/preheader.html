@@ -1,29 +1,29 @@
 {{- if .Site.Data.settings.preheader.active -}}
-<md-elevated-card class="col-xs-12 mx-auto">
-    <div class="preheader">
-        <div class="contact-info d-flex flex-sm-row flex-column justify-content-between align-items-center">
-          {{- if .Site.Data.settings.contact.phone -}}
-          <md-text-button
-            href="tel:{{ replace .Site.Data.settings.contact.phone ` ` `` }}"
-            alt="Phone contact number"
-          >
-            {{ .Site.Data.settings.contact.phone }}
-            <md-icon slot="icon">phone</md-icon>
-          </md-text-button>
-          {{- end -}} {{- if .Site.Data.settings.contact.email -}}
-          <md-text-button
-            href="tel:{{ replace .Site.Data.settings.contact.email ` ` `` }}"
-            alt="Contact email"
-          >
-            {{ .Site.Data.settings.contact.email }}
-            <md-icon slot="icon">mail</md-icon>
-          </md-text-button>
-          {{- end -}}
-          <div>
-            {{- if .Site.Data.settings.preheader.text -}}{{
-            .Site.Data.settings.preheader.text }}{{- end -}}
-          </div>
-        </div>
+<div class="preheader p-1 px-2">
+  <md-elevated-card class="grid gap-0 align-text-top">
+
+      {{- if .Site.Data.settings.contact.phone -}}
+      <md-text-button class="g-col-6 g-col-md-4"
+        href="tel:{{ replace .Site.Data.settings.contact.phone ` ` `` }}"
+        alt="Phone contact number"
+      >
+        {{ .Site.Data.settings.contact.phone }}
+        <md-icon slot="icon">phone</md-icon>
+      </md-text-button>
+      {{- end -}} {{- if .Site.Data.settings.contact.email -}}
+      <md-text-button class="g-col-6 g-col-md-4"
+        href="tel:{{ replace .Site.Data.settings.contact.email ` ` `` }}"
+        alt="Contact email"
+      >
+        {{ .Site.Data.settings.contact.email }}
+        <md-icon slot="icon">mail</md-icon>
+      </md-text-button>
+      {{- end -}}
+      <div class="g-col-12 g-col-md-4 text-center">
+        {{- if .Site.Data.settings.preheader.text -}}{{
+        .Site.Data.settings.preheader.text }}{{- end -}}
       </div>
-</md-elevated-card>
+
+  </md-elevated-card>
+</div>
 {{- end -}}
