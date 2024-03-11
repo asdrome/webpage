@@ -178,3 +178,31 @@
 .scrim-text {
   color: var(--md-sys-color-scrim);
 }
+
+.surface-container-dim{
+  background-color: var(--md-sys-color-surface-container-dim);
+}
+
+.surface-container-bright{
+  background-color: var(--md-sys-color-surface-container-bright);
+}
+
+.surface-container-lowest{
+  background-color: var(--md-sys-color-surface-container-lowest);
+}
+
+.surface-container-low{
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+.surface-container{
+  background-color: var(--md-sys-color-surface-container);
+}
+
+.surface-container-high{
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+.surface-container-highest{
+  background-color: var(--md-sys-color-surface-container-highest);
+}

@@ -1,0 +1,43 @@
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    {{ range (index .Site.Data .Language.Lang).header.menuitems }}
+      {{ if (index .items 0).title }}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle on-primary-text"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          {{ .title }}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ .link }}">{{ .title }}</a></li>
+            {{ range .items }}
+                <li><a class="dropdown-item" href="{{ .link }}">{{ .title }}</a></li>
+            {{ end }}
+          </ul>
+        </li>
+      {{else}}
+        <li class="nav-item">
+          <a class="nav-link on-primary-text" aria-current="page" href="{{ .link }}">{{ .title }}</a>
+        </li>
+      {{end}}
+    {{end}}
+  </ul>
+{{/*    <form class="d-flex" role="search">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>  */}}
+  {{ if (index .Site.Data .Language.Lang).header.cta.active }}
+    <md-filled-tonal-button
+      href="{{ (index .Site.Data .Language.Lang).header.cta.link }}"
+      >{{ (index .Site.Data .Language.Lang).header.cta.title
+      }}</md-filled-tonal-button
+    >
+  {{ end }}

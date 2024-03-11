@@ -69,10 +69,10 @@
     <head>
       {{ partial "head.html" . }}
     </head>
-  <body>
-    {{ partial "preheader.html" . }}
-    <header>
-      {{ partial "header.html" . }}
+  <body class="overflow-x-hidden">
+    {{ partial "header/preheader.html" . }}
+    <header class="sticky-top">
+      {{ partial "header/header.html" . }}
     </header>
     <main>
       {{ block "home" . }}{{ end }}
