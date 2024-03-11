@@ -1,6 +1,6 @@
 {{ define "home" }}
 <div class="p-1 px-2">
-  <md-elevated-card class="p-5">
+  <md-elevated-card class="p-5 on-surface-text">
     {{ .Content }}
     {{ range site.RegularPages }}
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>

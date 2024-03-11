@@ -3,7 +3,7 @@
   <md-elevated-card class="grid gap-0 align-text-top">
 
       {{- if .Site.Data.settings.contact.phone -}}
-      <md-text-button class="g-col-6 g-col-md-4"
+      <md-text-button class="g-col-6"
         href="tel:{{ replace .Site.Data.settings.contact.phone ` ` `` }}"
         alt="Phone contact number"
       >
@@ -11,7 +11,7 @@
         <md-icon slot="icon">phone</md-icon>
       </md-text-button>
       {{- end -}} {{- if .Site.Data.settings.contact.email -}}
-      <md-text-button class="g-col-6 g-col-md-4"
+      <md-text-button class="g-col-6"
         href="tel:{{ replace .Site.Data.settings.contact.email ` ` `` }}"
         alt="Contact email"
       >
@@ -19,10 +19,12 @@
         <md-icon slot="icon">mail</md-icon>
       </md-text-button>
       {{- end -}}
-      <div class="g-col-12 g-col-md-4 text-center">
+      
+{{/*  TODO: Fix preheader tex
+        <div class="me-auto text-center">
         {{- if .Site.Data.settings.preheader.text -}}{{
         .Site.Data.settings.preheader.text }}{{- end -}}
-      </div>
+      </div>  */}}
 
   </md-elevated-card>
 </div>

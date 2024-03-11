@@ -8,8 +8,7 @@ filter_has_numbers = false
 page_size = 9
 [preheader]
   active = true
-  is_light = true
-  text = 'Disponible de Lun-Vie de 09:00-17:00'
+  text = ''
 [contact]
   phone = '+52 56 3502 1474'
   email = 'contacto@asdrome.com'
