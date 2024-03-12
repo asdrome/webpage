@@ -3,12 +3,10 @@ title: Home
 ---
 {{< brick_intro >}}
 
-# Bienvenidos al asdrome.com, si se pudo
+# Bienvenidos a `Asdrome`
 
 Ofrecemos soluciones de transformación tecnológica. Somos una consultora que eleva empresas, redefine estándares y abraza la sutileza en cada línea de código. Desde la automatización hasta el desarrollo de software y la venta de equipos de cómputo, estamos aquí para impulsar tu visión con soluciones que trascienden las expectativas.
 
-{{< button "Cónoce nuestros productos" "https://store.asdrome.com/" >}}
-{{< button "" "" >}}
 
 {{< /brick_intro >}}
 {{< brick_image2 >}}
