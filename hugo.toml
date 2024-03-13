@@ -1,23 +1,29 @@
 baseURL = 'https://asdrome.com/'
 title = 'Asdrome'
-languageCode = 'es'
 defaultContentLanguage = 'es'
+defaultContentLanguageInSubdir = false
 theme = 'material-hugo'
 
+sectionPagesMenu = 'main'
 
 [module]
   [module.hugoVersion]
-    extended = false
+    extended = true
     min = "0.122.0"
 
 [languages]
   [languages.es]
-    languageName= 'Español'
-    contentDir= 'content/es'
-    weight= 1
-    disabled= false
+    contentDir = 'content/es'
+    disabled = false
+    languageCode = 'es'
+    languageDirection = 'ltr'
+    languageName = 'Español'
+    weight = 1
+
   [languages.en]
-    languageName= 'English'
-    contentDir= 'content/en'
-    weight= 2
-    disabled= true
+    contentDir = 'content/en'
+    disabled = true
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    weight = 2

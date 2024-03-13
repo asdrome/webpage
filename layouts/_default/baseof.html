@@ -1,83 +1,18 @@
 <!DOCTYPE html>
-
-  {{/*  
-  <body id="top" class="background on-background-text {{ if in (substr .Content  0 100) `transparent_header` }}transparent_header{{ end }} filename_{{ with .File }}{{ .BaseFileName }}{{ end }}">
-    
-    <div class="innerbody background">
-
-    <header>
-      <div class="on-background-text background container {{ if (index .Site.Data .Language.Lang).header.cta.active }}has_cta{{ end }}">
-        <div>
-          {{ partial "logo.html" . }}
-        </div>
-        <div class="nav">
-          <nav>
-            <ul>
-              {{ range (index .Site.Data .Language.Lang).header.menuitems }}
-                <li class="{{ if eq .link `/` }}{{ if eq $.RelPermalink `/` }}active{{ end }}{{ else }}{{ if in $.RelPermalink .link }}active{{ end }}{{ end }}{{ if (index .items 0).title }} haschildren{{ end }}"><a href="{{ .link }}">{{ .title }}</a>
-                  {{ if (index .items 0).title }}
-                  <ul>
-                    {{ range .items }}
-                      <li><a class="" href="{{ .link }}">{{ .title }}</a></li>
-                    {{ end }}
-                  </ul>
-                  {{ end }}
-                </li>
-              {{ end }}
-            </ul>
-          </nav>
-        </div>
-        {{ if (index .Site.Data .Language.Lang).header.cta.active }}
-        <div>
-          <md-filled-tonal-button href="{{ (index .Site.Data .Language.Lang).header.cta.link }}">{{ (index .Site.Data .Language.Lang).header.cta.title }}</md-filled-tonal-button>
-        </div>
-        {{ end }}
-        <button id="togglemenu" onclick="document.body.classList.toggle('menushown');">Toggle menu</button>
-    </header>
-
-    {{- block "content" . -}}{{- end -}}
-
-    <footer class="{{ if (index .Site.Data .Language.Lang).footer.dark_footer }}dark{{ end }}">
-      <div>
-        <div class="container">
-          <div>
-            {{ partial "footerlogo.html" . }}
-          </div>
-          <div>
-            <ul>
-              {{ range (index .Site.Data .Language.Lang).footer.menuitems }}
-                <li><a href="{{ .link }}">{{ .title }}</a></li>
-              {{ end }}
-            </ul>  
-          </div>
-          <div>
-            {{ partial "socialbuttons.html" . }}
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="tertiary-container container">
-		      <div>{{ markdownify (index .Site.Data .Language.Lang).footer.footer_text }}</div>
-		    </div>
-  		</div>
-		</footer>
-
-
-      </div>
-  </body>  */}}
-  <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-    <head>
-      {{ partial "head.html" . }}
-    </head>
+<html
+  lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}"
+>
+  <head>
+    {{ partial "head/head.html" . }}
+  </head>
   <body class="overflow-x-hidden">
     {{ partial "header/preheader.html" . }}
-    <header class="sticky-top">
-      {{ partial "header/header.html" . }}
-    </header>
-    <main>
-      {{ block "home" . }}{{ end }}
-    </main>
-    <footer class="{{ if (index .Site.Data .Language.Lang).footer.dark_footer }}dark{{ end }}">
+    <header class="sticky-top">{{ partial "header/header.html" . }}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
+    <footer
+      class="{{ if (index .Site.Data .Language.Lang).footer.dark_footer }}dark{{ end }}"
+    >
       {{ partial "footer.html" . }}
     </footer>
     {{ partial "head/optionaljs.html" . }}

@@ -1,0 +1,8 @@
+[menu]
+  [menu.main]
+    [menu.main.home]
+      name = "Inicio"
+    [menu.main.about]
+      name = "Acerca"
+    [menu.main.contact]
+      name = "Contacto"
