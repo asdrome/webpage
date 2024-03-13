@@ -1,0 +1,28 @@
+[[menuitems]]
+title = "Acerca"
+link = "/about/"
+
+[[menuitems.items]]
+  title = "F.A.Q."
+  link = "/faq/"
+
+[[menuitems]]
+title = "Contacto"
+link = "/contact/"
+
+[[menuitems]]
+title = "Nosotros"
+link = "/team/"
+
+[[menuitems]]
+title = "Pages"
+link = "/contact/"
+
+[[menuitems]]
+title = "Blog"
+link = "/blog/"
+
+[cta]
+active = true
+title = "Get started"
+link = "/get-started/"
